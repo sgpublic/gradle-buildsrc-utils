@@ -1,9 +1,11 @@
 plugins {
+    signing
+    `maven-publish`
     `kotlin-dsl`
     kotlin("jvm") version "2.0.0"
-
     `java-gradle-plugin`
     id("com.gradle.plugin-publish") version "1.2.0"
+    id("io.github.sgpublic.java-publish") version "1.0.0-alpha01"
 }
 
 group = "io.github.sgpublic"
@@ -22,12 +24,6 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(17)
-}
-
-publishing {
-    repositories {
-        mavenLocal()
-    }
 }
 
 gradlePlugin {
