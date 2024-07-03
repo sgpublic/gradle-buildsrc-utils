@@ -31,8 +31,8 @@ publishing {
 }
 
 gradlePlugin {
-    website.set("https://github.com/sgpublic/buildsrc-utils")
-    vcsUrl.set("https://github.com/sgpublic/buildsrc-utils.git")
+    website.set("https://github.com/sgpublic/gradle-buildsrc-utils")
+    vcsUrl.set("https://github.com/sgpublic/gradle-buildsrc-utils.git")
 
     plugins {
         create("gradlePublishing") {
@@ -40,6 +40,7 @@ gradlePlugin {
             implementationClass = "io.github.sgpublic.gradle.BuildSrcUtils"
             displayName = "Gradle buildSrc Utils"
             description = "A collection of gradle buildSrc utils."
+            tags = listOf("buildsrc")
         }
     }
 }
